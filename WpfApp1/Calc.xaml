@@ -1,0 +1,24 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="712.304" Width="800">
+    <Grid>
+        <TextBox x:Name="tb_LoanAmount1" HorizontalAlignment="Left" Height="23" Margin="114,30,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="tb_LoanAmount1_TextChanged"/>
+        <Label Content="Сумма займа" HorizontalAlignment="Left" Margin="24,27,0,0" VerticalAlignment="Top"/>
+        <Label Content="Срок займа" HorizontalAlignment="Left" Margin="24,77,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tb_LoanTerm" HorizontalAlignment="Left" Height="23" Margin="114,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="tb_LoanTerm_TextChanged"/>
+        <Label Content="Общая сумма выплаты" HorizontalAlignment="Left" Margin="402,27,0,0" VerticalAlignment="Top"/>
+        <Label Content="Сумма процентов" HorizontalAlignment="Left" Margin="402,77,0,0" VerticalAlignment="Top"/>
+        <Label Content="Эффективная ставка" HorizontalAlignment="Left" Margin="402,124,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tb_TotalPayout" HorizontalAlignment="Left" Height="23" Margin="568,30,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="tb_TotalPayout_TextChanged"/>
+        <TextBox x:Name="tb_InterestAmount" HorizontalAlignment="Left" Height="23" Margin="568,77,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="tb_EffectiveRate" HorizontalAlignment="Left" Height="23" Margin="568,128,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btn_start" Content="Вывести" HorizontalAlignment="Left" Margin="24,213,0,0" VerticalAlignment="Top" Width="210" Click="btn_start_Click"/>
+        <TextBox x:Name="tb_rate" HorizontalAlignment="Left" Height="32" Margin="25,166,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="605"/>
+        <TextBox x:Name="tb_interest" HorizontalAlignment="Left" Height="324" Margin="267,213,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="449"/>
+    </Grid>
+</Window>
