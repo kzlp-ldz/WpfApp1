@@ -18,7 +18,7 @@
         <TextBox x:Name="tb_InterestAmount" HorizontalAlignment="Left" Height="23" Margin="568,77,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="tb_EffectiveRate" HorizontalAlignment="Left" Height="23" Margin="568,128,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Button x:Name="btn_start" Content="Вывести" HorizontalAlignment="Left" Margin="24,213,0,0" VerticalAlignment="Top" Width="210" Click="btn_start_Click"/>
-        <TextBox x:Name="tb_rate" HorizontalAlignment="Left" Height="32" Margin="25,166,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="605"/>
+        <TextBox x:Name="tb_rate" HorizontalAlignment="Left" Height="32" Margin="25,166,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="605" TextChanged="tb_rate_TextChanged"/>
         <TextBox x:Name="tb_interest" HorizontalAlignment="Left" Height="324" Margin="267,213,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="449"/>
     </Grid>
 </Window>
