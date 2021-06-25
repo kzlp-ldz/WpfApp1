@@ -44,17 +44,18 @@ namespace WpfApp1
                 double[] cumulatively = new double[loanTe];
                 double[] payments = new double[loanTe];
                 double cumu = 0;
+                List<string> result = new List<string>();
                 for (int i = 0; i < loanTe; i++)
                 {
                     cumu += (Convert.ToDouble(rate[i]) / 100) * loanAm;
                     cumulatively[i] = cumu;
                     payments[i] = cumu + loanAm;
-                    tb_interest.Text = $"День: {i + 1}, Ставка: {rate[i]}, Накопительные %: {cumulatively[i]}, Сумма выплат: {payments[i]}";
-
+                    result.Add($"День: {i + 1}, Ставка: {rate[i]}, Накопительные %: {cumulatively[i]}, Сумма выплат: {payments[i]}");
                 }
                 tb_TotalPayout.Text = Convert.ToString(payments[loanTe - 1]);
                 tb_InterestAmount.Text = Convert.ToString(cumulatively[loanTe - 1]);
                 tb_EffectiveRate.Text = Convert.ToString(((cumulatively[loanTe - 1] / loanAm) / loanTe) * 100);
+                tb_interest.Text = string.Join(Environment.NewLine, result);
             }
             else
             {
