@@ -20,5 +20,7 @@
         <Button x:Name="btn_start" Content="Вывести" HorizontalAlignment="Left" Margin="24,213,0,0" VerticalAlignment="Top" Width="210" Click="btn_start_Click"/>
         <TextBox x:Name="tb_rate" HorizontalAlignment="Left" Height="32" Margin="25,166,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="605" TextChanged="tb_rate_TextChanged"/>
         <TextBox x:Name="tb_interest" HorizontalAlignment="Left" Height="324" Margin="267,213,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="449"/>
+        <Button x:Name="btn_safe" Content="Сохранить" HorizontalAlignment="Left" Height="27" Margin="24,124,0,0" VerticalAlignment="Top" Width="91" Click="btn_safe_Click"/>
+        <Button x:Name="btn_load" Content="Загрузить" HorizontalAlignment="Left" Height="27" Margin="149,124,0,0" VerticalAlignment="Top" Width="101" Click="btn_load_Click"/>
     </Grid>
 </Window>

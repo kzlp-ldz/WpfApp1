@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.IO;
 
 namespace WpfApp1
 {
@@ -20,6 +21,7 @@ namespace WpfApp1
     /// </summary>
     public partial class MainWindow : Window
     {
+        private List<string> result = new List<string>();
         public MainWindow()
         {
             InitializeComponent();
@@ -71,6 +73,34 @@ namespace WpfApp1
         private void tb_rate_TextChanged(object sender, TextChangedEventArgs e)
         {
 
+        }
+
+        private void btn_safe_Click(object sender, RoutedEventArgs e)
+        {
+            string path = "C:\\Users\\Public\\Documents\\file.txt";
+
+            // write new file
+            using (var sw = new StreamWriter(path, false, System.Text.Encoding.Default))
+            {
+
+                foreach (var line in result)
+                    sw.WriteLine(line);
+
+            }
+        }
+
+        private void btn_load_Click(object sender, RoutedEventArgs e)
+        {
+            string path = "C:\\Users\\Public\\Documents\\file.txt";
+
+            using (var sr = new StreamReader(path, System.Text.Encoding.Default))
+            {
+                string line;
+                while ((line = sr.ReadLine()) != null)
+                {
+                    tb_interest.Text = string.Join(Environment.NewLine, line);
+                }
+            }
         }
     }
 }
