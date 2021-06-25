@@ -36,7 +36,6 @@ namespace WpfApp1
                 cumulatively[i] = cumu;
                 payments[i] = cumu + loanAm;
             }
-
         }
 
         private void tb_LoanAmount1_TextChanged(object sender, TextChangedEventArgs e)
@@ -49,13 +48,9 @@ namespace WpfApp1
             int loanTe = int.Parse(tb_LoanTerm.Text);
         }
 
-        private void btn_start_Click(object sender, RoutedEventArgs e, double[] payments)
+        private void btn_start_Click(object sender, RoutedEventArgs e)
         {
-            tb_TotalPayout.Text = Convert.ToString(payments[]);
-        }
 
-        private void tb_TotalPayout_TextChanged(object sender, TextChangedEventArgs e)
-        {
         }
     }
 }
